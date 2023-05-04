@@ -1,0 +1,30 @@
+
+section{
+    margin-left: 90px;
+}
+.link div.link-fb button.btn-facebook{
+    background: #4267b2;
+    border: none;
+    color: white;
+    width: 100%;
+    border-radius: 4px;
+}
+.link div.link-fb button.btn-facebook i{
+    margin-right: 40px;
+}
+.link div.link-fb button.btn-facebook p{
+    font-size: 20px;
+}
+.link div.link-google button.btn-google{
+    background: #f36267;
+    border: none;
+    color: white;
+    width: 100%;
+    border-radius: 4px;
+}
+.link div.link-google button.btn-google i{
+    margin-right: 40px;
+}
+.link div.link-google button.btn-google p{
+    font-size: 20px;
+}

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Virtual Glasses</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/TryOn.css">
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="myNavBar navbar navbar-expand-lg navbar-light">
+            <div class="col-7 myNavBar__col">
+                <div class="myNavBar__left">
+                    <form class="myNavBar__form-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for anything">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="myNavBar__right">
+                    <ul class="navbar-nav mr-auto">
+                        <p class="mt-2">Save 15% on two or more Rx pairs.</p>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Learn more.</a>
+                        </li>
+                        <li class="nav-item myNavBar__cart">
+                            <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i></a>
+                        </li>
+                        <li class="nav-item myNavBar__buttons d-flex justify-content-between">
+                            <a class="nav-link" href="#">
+                              <button class="button button--white">Log In</button>
+                            </a>
+                            <a class="nav-link" href="./dangky.html">
+                              <button class="button button--red">Sign Up</button>
+                            </a>
+                          </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navInstruction navbar navbar-expand-md">
+            <a class="navbar-brand text-center" href="#">
+                <p class="font-weight-bold mb-0"><i class="fa fa-glasses"></i>Eyeglasses</p>
+                <p class="mb-0">Shop frames below, or find five to try for free.</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarInstruction"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarInstruction">
+                <ul class="navbar-nav ml-auto" id="mainNav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Eyeglasses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Men</a>
+                            <a class="dropdown-item" href="#">Women</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sunglasses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Men</a>
+                            <a class="dropdown-item" href="#">Women</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./introduce.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accessories</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./TryOn.html">Try on virtually</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Get a prescription</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./contact.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav> 
+    </header>
+
+    <div class="container vglasses">
+        <div class="row  justify-content-between">
+            <div class="col-6 vglasses__left">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="mb-2">Virtual Glasses</h1>
+                    </div>
+                </div>
+                <div class="row" id="vglassesList">
+                </div>
+            </div>
+            <div class="col-5 vglasses__right p-0">
+                <div class="vglasses__card">
+                    <div class="mb-2 text-right mt-2 mr-2">
+                        <button class="btn btn-warning" onclick="removeGlasses(false)">Before</button>
+                        <button class="btn btn-warning" onclick="removeGlasses(true)">After</button>
+                    </div>
+                    <div class="vglasses__model" id="avatar"></div>
+                    <div id="glassesInfo" class="vglasses__info">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <!-- MAIN JS -->       
+        <script type="module" src="./js/main.js"></script>
+  
+</body>
+
+</html>

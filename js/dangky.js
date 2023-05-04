@@ -1,0 +1,172 @@
+
+function kiemTraHoTen() {
+    let fullname = $("#txtFullname").val();
+    let pattern = /^([A-Z]{1}[a-z]*\s)+([A-Z]{1}[a-z]*)$/;
+    if (pattern.test(fullname)) {
+        $("#tbFullname").html("");
+        return true;
+    }
+    else {
+        $("#tbFullname").html("Họ tên không hợp lệ");
+        return false;
+    }
+}
+
+$("#txtFullname").blur(function (e) {
+    kiemTraHoTen();
+});
+
+function kiemTraEmail() {
+    let email = $("#txtEmail").val();
+    let pattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (pattern.test(email)) {
+        $("#tbEmail").html("");
+        return true;
+    }
+    else {
+        $("#tbEmail").html("Email không chứ ký tự đặc biệt");
+        return false;
+    }
+}
+$("#txtEmail").blur(function (e) {
+    kiemTraEmail();
+
+});
+function kiemTraTaiKhoan() {
+    let tk = $("#txtAcc").val();
+    let pattern = /^[a-zA-Z0-9]+$/;
+    if (pattern.test(tk)) {
+        $("#tbAcc").html("");
+        return true;
+    }
+    else {
+        $("#tbAcc").html("Tài khoản không chứ ký tự đặc biệt");
+        return false;
+    }
+}
+$("#txtAcc").blur(function (e) {
+    kiemTraTaiKhoan();
+
+});
+function kiemTraMatKhau() {
+    let pwd = $("#txtPwd").val();
+    let pattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,}$/;
+    if (pattern.test(pwd)) {
+        $("#tbPwd").html("");
+        return true;
+    }
+    else {
+        $("#tbPwd").html("Mật khẩu phải chứa ít nhất 1 ký tự in hoa, 1 ký tự số, 1 ký tự đặc biệt và có ít nhất 8 ký tự");
+        return false;
+    }
+}
+$("#txtPwd").blur(function (e) {
+    kiemTraMatKhau();
+});
+function kiemTraMatKhauNhapLai() {
+    let pwd2 = $("#txtPwd2").val();
+    let pwd = $("#txtPwd").val();
+    if (pwd2 == pwd) {
+        $("#tbPwd2").html("");
+        return true;
+    }
+    else {
+        $("#tbPwd2").html("Mật khẩu nhập lại không khớp!");
+        return false;
+    }
+}
+$("#txtPwd2").blur(function (e) {
+    kiemTraMatKhauNhapLai();
+
+});
+function kiemTraNgaySinh() {
+    let ns_val = $("#txtDate").val();
+    let day, month, year;
+    let ns = new Date(ns_val);
+    day = ns.getDate();
+    month = ns.getMonth() + 1;
+    year = ns.getFullYear();
+    let ns_String;
+    if (month < 10) {
+        if (day < 10)
+            ns_String = "0" + day + "/" + "0" + month + "/" + year;
+        else
+            ns_String = day + "/" + "0" + month + "/" + year;
+    }
+    else
+        if (day < 10)
+            ns_String = "0" + day + "/" + month + "/" + year;
+        else
+            ns_String = day + "/" + month + "/" + year;
+    // alert(ns_String);
+    let pattern = /^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\d\d$/;
+    if (pattern.test(ns_String)) {
+        $("#tbDate").html("");
+        return true;
+    }
+    else {
+        $("#tbDate").html("Ngày sinh không hợp lệ!");
+        return false;
+    }
+}
+$("#txtDate").blur(function (e) {
+    kiemTraNgaySinh();
+
+});
+function kiemTraSDT(){
+    let sdt = $("#txtPhone").val();
+    let pattern = /^\d{10}$/;
+    if(pattern.test(sdt)){
+        $("#tbPhone").html("");
+        return true;
+    }
+    else{
+        $("#tbPhone").html("Số điện thoại không hợp lệ!");
+        return false;
+    }
+}
+$("#txtPhone").blur(function (e) { 
+    kiemTraSDT();
+    
+});
+function kiemTraDiaChi(){
+    let dc = $("#txtAddress").val();
+    let pattern = /^[a-zA-Z0-9]{3,}$/;
+    if(pattern.test(dc)){
+        $("#tbAddress").html("");
+        return true;
+    }
+    else{
+        $("#tbAddress").html("Địa chỉ không hợp lệ!");
+        return false;
+    }
+}
+$("#txtAddress").blur(function (e) { 
+    kiemTraDiaChi();
+    
+});
+
+$("#btndangky").click(function (e) { 
+    if(kiemTraHoTen() && kiemTraEmail() && kiemTraTaiKhoan() && kiemTraMatKhau() && kiemTraMatKhauNhapLai() && kiemTraNgaySinh()
+    && kiemTraSDT() && kiemTraDiaChi()){
+        showMessage();
+    }
+    else
+        showError();
+    
+});
+
+function showMessage() {
+    Swal.fire(
+        'Đăng ký thành công',
+        'Nhấn OK để tắt thông báo',
+        'success'
+      )
+}
+function showError() {
+    Swal.fire(
+        'Thông tin đăng ký chưa chính xác!',
+        'Nhấn OK để tắt thông báo',
+        'error'
+      )
+}
