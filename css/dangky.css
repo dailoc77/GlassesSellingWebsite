@@ -28,3 +28,26 @@ section{
 .link div.link-google button.btn-google p{
     font-size: 20px;
 }
+.body_frm{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+    background-image:url(../img/banner2.png);
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica;
+    -webkit-font-smoothing: antialiased; 
+    padding-bottom: 30px;
+    padding-top: 220px;
+   }
+   
+   .container{
+     position: relative;
+     background: inherit;
+     border-radius: 2px;
+     overflow: hidden;
+     box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+     background: rgba(255, 255, 255, 0.603);
+   }
+   

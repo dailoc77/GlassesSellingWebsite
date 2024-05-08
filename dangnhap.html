@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- FONT GOOGLE -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/dangky.css">
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/dangnhap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body onload="soluongCart()">
+    <header>
+        <nav class="myNavBar navbar navbar-expand-lg navbar-light">
+            <div class="col-7 myNavBar__col">
+                <div class="myNavBar__left">
+                    <form class="myNavBar__form-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for anything">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="myNavBar__right">
+                    <ul class="navbar-nav mr-auto">
+                        <p class="mt-2">Save 15% on two or more Rx pairs.</p>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Learn more.</a>
+                        </li>
+                        <li class="nav-item myNavBar__cart" style="position: relative;">
+                            <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i></a>
+                            <span style="position: absolute; left: 80%;top: 0;" class="soluong_cart"></span>
+                        </li>
+                        <li class="nav-item myNavBar__buttons d-flex justify-content-between">
+                            <a class="nav-link" href="./dangnhap.html">
+                                <button class="button button--white">Log In</button>
+                            </a>
+                            <a class="nav-link" href="./dangky.html">
+                                <button class="button button--red">Sign Up</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navInstruction navbar navbar-expand-md">
+            <a class="navbar-brand text-center" href="#">
+                <p class="font-weight-bold mb-0"><i class="fa fa-glasses"></i>Eyeglasses</p>
+                <p class="mb-0">Shop frames below, or find five to try for free.</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarInstruction" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarInstruction">
+                <ul class="navbar-nav ml-auto" id="mainNav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Eyeglasses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./kinhnam.html">Men</a>
+                            <a class="dropdown-item" href="./kinhnu.html">Women</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sunglasses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./Sunkinhnam.html">Men</a>
+                            <a class="dropdown-item" href="./Sunkinhnu.html">Women</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./introduce.html">About</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Accessories</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./TryOn.html">Try on virtually</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./sitemap.html">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container1">
+        <form action="" class="form1">
+            <h3 class="">Sign in</h3>
+            <div class="form-group">
+                <input type="text" class="form-input" required>
+                <label class="form-label">Email</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" id="password" required>
+                <label class="form-label">Password</label>
+                <span id="error"></span>
+            </div>
+            <a href="./home.html">
+                 <input type="button" value="Sign in" class="btn-signin">
+            </a>
+           
+            <div class="signup">Don't have an account? <a id="signup" href="./dangky.html">Sign up</a></div>
+        </form>
+    </div>
+        <script src="./js/cart.js"></script>
+</body>
+</html>
+
+</body>
+
+</html>

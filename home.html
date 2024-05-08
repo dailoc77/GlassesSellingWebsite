@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo glasstic</title>
+    <title>Home</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
 
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
-<body>
+<body onload="soluongCart()">
 
     <!-- HEADER -->
     <header>
@@ -51,11 +51,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Learn more.</a>
                         </li>
-                        <li class="nav-item myNavBar__cart">
-                            <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i></a>
+                        <li class="nav-item myNavBar__cart" style="position: relative;">
+                            <a class="nav-link" href="./cart.html"><i class="fa fa-shopping-cart"></i></a>
+                            <span style="position: absolute; left: 80%;top: 0;" class="soluong_cart"></span>
                         </li>
                         <li class="nav-item myNavBar__buttons d-flex justify-content-between">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="./dangnhap.html">
                               <button class="button button--white">Log In</button>
                             </a>
                             <a class="nav-link" href="./dangky.html">
@@ -78,7 +79,7 @@
             <div class="collapse navbar-collapse" id="navbarInstruction">
                 <ul class="navbar-nav ml-auto" id="mainNav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="./home.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -86,8 +87,8 @@
                             Eyeglasses
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Men</a>
-                            <a class="dropdown-item" href="#">Women</a>
+                            <a class="dropdown-item" href="./kinhnam.html">Men</a>
+                            <a class="dropdown-item" href="./kinhnu.html">Women</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -96,21 +97,21 @@
                             Sunglasses
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Men</a>
-                            <a class="dropdown-item" href="#">Women</a>
+                            <a class="dropdown-item" href="./Sunkinhnam.html">Men</a>
+                            <a class="dropdown-item" href="./Sunkinhnu.html">Women</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./introduce.html">About</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Accessories</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./TryOn.html">Try on virtually</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Try on virtually</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Get a prescription</a>
+                        <a class="nav-link" href="./sitemap.html">Sitemap</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./contact.html">Contacts</a>
@@ -361,14 +362,14 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-7 mt-3 mt-md-0">
                     <h3><a href="#" data-toggle="modal" data-target="#cyberModal">Summer 2023</a></h3>
-                    <h4>03/01/2021</h4>
+                    <h4>03/01/2023</h4>
                     <p>Our new archive-inspired shapes are a visual vacation.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-7 col-xl-7">
                     <h3><a href="#" data-toggle="modal" data-target="#cyberModal">Add a pair and save</a></h3>
-                    <h4>03/01/2021</h4>
+                    <h4>03/01/2023</h4>
                     <p>Get 15% off when you buy two (or more!) pairs of prescription eyeglasses or sunglasses. There are
                         colorful new options to consider.</p>
                 </div>
@@ -455,7 +456,7 @@
         </div>
         <div class="footer__bottom">
             <div>
-                © 2023 Instruction. All rights reserved | Design by <a href="#">nvdsc</a>
+                © 2023 Instruction. All rights reserved | Design by <a href="#">Nhóm 9</a>
             </div>
         </div>
     </footer>
@@ -487,11 +488,11 @@
     <!-- Thu vien ho tro -->
 
     <script src="./js/jquery.min.js"></script>
-
     <script src="./js/bootstrap.bundle.min.js"></script>
 
     <!-- OWL JS -->
     <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/cart.js"></script>
     <script>
         $('.owl-carousel').owlCarousel({
             loop: true,

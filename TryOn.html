@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,13 +11,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+         <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+    
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/TryOn.css">
+    <script type="module" src="./js/main.js"></script>
+
 
 </head>
 
-<body>
+<body onload="soluongCart()">
     <!-- HEADER -->
     <header>
         <nav class="myNavBar navbar navbar-expand-lg navbar-light">
@@ -42,11 +49,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Learn more.</a>
                         </li>
-                        <li class="nav-item myNavBar__cart">
-                            <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i></a>
+                        <li class="nav-item myNavBar__cart" style="position: relative;">
+                            <a class="nav-link" href="./cart.html"><i class="fa fa-shopping-cart"></i></a>
+                            <span style="position: absolute; left: 80%;top: 0;" class="soluong_cart"></span>
                         </li>
                         <li class="nav-item myNavBar__buttons d-flex justify-content-between">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="./dangnhap.html">
                               <button class="button button--white">Log In</button>
                             </a>
                             <a class="nav-link" href="./dangky.html">
@@ -68,7 +76,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarInstruction">
                 <ul class="navbar-nav ml-auto" id="mainNav">
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="./home.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
@@ -77,8 +85,8 @@
                             Eyeglasses
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Men</a>
-                            <a class="dropdown-item" href="#">Women</a>
+                            <a class="dropdown-item" href="./kinhnam.html">Men</a>
+                            <a class="dropdown-item" href="./kinhnu.html">Women</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -87,28 +95,28 @@
                             Sunglasses
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Men</a>
-                            <a class="dropdown-item" href="#">Women</a>
+                            <a class="dropdown-item" href="./Sunkinhnam.html">Men</a>
+                            <a class="dropdown-item" href="./Sunkinhnu.html">Women</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./introduce.html">About</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Accessories</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item active">
                         <a class="nav-link" href="./TryOn.html">Try on virtually</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Get a prescription</a>
+                        <a class="nav-link" href="./sitemap.html">Sitemap</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="./contact.html">Contacts</a>
                     </li>
                 </ul>
             </div>
-        </nav> 
+        </nav>
     </header>
 
     <div class="container vglasses">
@@ -136,7 +144,6 @@
         </div>
     </div>
 
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -149,6 +156,7 @@
         crossorigin="anonymous"></script>
         <!-- MAIN JS -->       
         <script type="module" src="./js/main.js"></script>
+        <script src="./js/cart.js"></script>
   
 </body>
 

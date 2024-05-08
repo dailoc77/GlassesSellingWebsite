@@ -170,3 +170,28 @@ function showError() {
         'error'
       )
 }
+function openEye(class1, class2){
+    $(class1).css("display", "inline-block");
+    $(class2).css("display", "none");
+}
+function closeEye(class1, class2){
+    $(class1).css("display", "none");
+    $(class2).css("display", "inline-block");
+}
+function openClosePWD(id,class1, class2){
+    let pwd = document.getElementById(id);   
+    if(pwd.type == 'text'){
+        pwd.type = 'password';
+        openEye(class1,class2);
+    }else{
+        pwd.type = 'text';
+        closeEye(class1,class2);
+    }
+}
+$("#btn_eye").click(function (e) { 
+    openClosePWD("txtPwd",".eyeO1",".eyeC1"); 
+});
+$("#btn_eye_2").click(function (e) { 
+    openClosePWD("txtPwd2",".eyeO2",".eyeC2"); 
+});
+

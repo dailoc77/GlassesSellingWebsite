@@ -57,8 +57,8 @@
 .righty__stuff input{
     flex: 1;
     padding: 15px 20px;
+    width: 290px;
 }
-
 .long {
     height: 200px;
 }

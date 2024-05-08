@@ -1,0 +1,287 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+
+    <!-- FONT GOOGLE -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="/font/Quicksand/quicksand.css">
+    <link rel="stylesheet" href="/font/Qicksand-Bold/Quicksand-Bold.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.css">
+
+<body onload="showCart(),soluongCart()">
+    <!-- HEADER -->
+    <header>
+        <nav class="myNavBar navbar navbar-expand-lg navbar-light">
+            <div class="col-7 myNavBar__col">
+                <div class="myNavBar__left">
+                    <form class="myNavBar__form-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for anything">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="myNavBar__right">
+                    <ul class="navbar-nav mr-auto">
+                        <p class="mt-2">Save 15% on two or more Rx pairs.</p>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Learn more.</a>
+                        </li>
+                        <li class="nav-item myNavBar__cart" style="position: relative;">
+                            <a class="nav-link" href="./cart.html"><i class="fa fa-shopping-cart"></i></a>
+                            <span style="position: absolute; left: 80%;top: 0;" class="soluong_cart"></span>
+                        </li>
+                        <li class="nav-item myNavBar__buttons d-flex justify-content-between">
+                            <a class="nav-link" href="./dangnhap.html">
+                              <button class="button button--white">Log In</button>
+                            </a>
+                            <a class="nav-link" href="./dangky.html">
+                              <button class="button button--red">Sign Up</button>
+                            </a>
+                          </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navInstruction navbar navbar-expand-md">
+            <a class="navbar-brand text-center" href="#">
+                <p class="font-weight-bold mb-0"><i class="fa fa-glasses"></i>Eyeglasses</p>
+                <p class="mb-0">Shop frames below, or find five to try for free.</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarInstruction"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarInstruction">
+                <ul class="navbar-nav ml-auto" id="mainNav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Eyeglasses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./kinhnam.html">Men</a>
+                            <a class="dropdown-item" href="./kinhnu.html">Women</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sunglasses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./Sunkinhnam.html">Men</a>
+                            <a class="dropdown-item" href="./Sunkinhnu.html">Women</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./introduce.html">About</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Accessories</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./TryOn.html">Try on virtually</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./sitemap.html">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="outer">
+        
+    </div>
+    <div class="title">Giỏ hàng của bạn</div>
+    <div class="cart">
+        <div class="cart__left">
+            <div class="cart__head">
+                <span>Bạn đang có </span>
+                <b class="ammount"></b>
+                <span> sản phẩm trong giỏ</span>
+            </div>
+            <div class="cartlist">
+
+            </div>
+            <!-- <div class="cart__product">
+                <div class="cart__item">
+                    <div class="item__top">
+                        <div class="item__info">
+                            <img src="./img/o4.jpg" alt="" style="width: 100%;">
+                            <div class="details">
+                                <b>Glass</b>
+                                <div class="buy__ammount li-text">
+                                    <button class="ammount-sub">-</button>
+                                    <input class="ammount-input" type="tel" value="1">
+                                    <button class="ammount-add">+</button>
+                                </div>
+                                <b class="price">9.800.000đ</b>
+                            </div>
+                        </div>
+                        <i class="fa-regular fa-trash-can li-text"></i>
+                    </div>
+                    <div class="item__bot">
+                        <b>Thành tiền :</b>
+                        <span class="total">9.800.000đ</span>
+                    </div>
+                </div>
+            </div> -->
+            
+        </div>
+        <div class="cart__right">
+            <span>Thông tin đơn hàng</span>
+            <div class="right__total">
+                <b>Thành tiền :</b>
+                <b class="order__total">0đ</b>
+            </div>
+            <ul>
+                <li>Phí vận chuyển sẽ được tính ở trang thanh toán.</li>
+                <li>Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.</li>
+            </ul>
+
+            <button class="price__button__add price__button--hover li-text" onclick="thanhtoan()">
+                <span>Thanh toán</span>
+            </button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__top section">
+            <div class="container">
+                <div class="footer__grid row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <h3>About Us</h3>
+                        <p>
+                            We are an eyewear store that offers a wide selection of fashionable and functional glasses
+                            from top brands. Our friendly staff are always ready to assist you in finding the perfect
+                            pair of glasses to match your style and budget. Come visit us and see the world in a new
+                            light!
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <h3>Latest News</h3>
+                        <div class="footer__link">
+                            <i class="fa fa-long-arrow-alt-right"></i>
+                            <a href="#">Services</a>
+                        </div>
+                        <div class="footer__link">
+                            <i class="fa fa-long-arrow-alt-right"></i>
+                            <a href="#">Glasses</a>
+                        </div>
+                        <div class="footer__link">
+                            <i class="fa fa-long-arrow-alt-right"></i>
+                            <a href="#">Sunglasses</a>
+                        </div>
+                        <div class="footer__link">
+                            <i class="fa fa-long-arrow-alt-right"></i>
+                            <a href="#">Accessories</a>
+                        </div>
+                        <div class="footer__link">
+                            <i class="fa fa-long-arrow-alt-right"></i>
+                            <a href="#">Products</a>
+                        </div>
+                        <div class="footer__link">
+                            <i class="fa fa-long-arrow-alt-right"></i>
+                            <a href="#">Gift Card</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <h3>Contact Info</h3>
+                        <div class="footer__contact">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <a href="#">112 Cao Thắng, Quận 3 – HCM</a>
+                        </div>
+                        <div class="footer__contact">
+                            <i class="far fa-envelope"></i>
+                            <a href="mailto:ndat04913@gmail.com">ndat04913@gmail.com</a>
+                        </div>
+                        <div class="footer__contact">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:0966894644">096.689.4644</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__form">
+                    <form>
+                        <div class="form-group form-row">
+                            <label class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-form-label"
+                                for="emailFooter">Sign up for our Newsletter</label>
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                                <input type="email" class="form-control" id="emailFooter"
+                                    placeholder="Enter Email Address ...">
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 text-center">
+                                <button type="submit" class="btn">SUBMIT</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div>
+                © 2023 Instruction. All rights reserved | Design by <a href="#">Nhóm 9</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Thu vien ho tro -->
+
+    <script src="./js/jquery.min.js"></script>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- OWL JS -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/glasses_collection.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+</body>

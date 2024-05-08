@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo glasstic</title>
+    <title>Contacts</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
 
@@ -21,16 +21,16 @@
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="/font/Quicksand/quicksand.css">
-    <link rel="stylesheet" href="/font/Qicksand-Bold/Quicksand-Bold.css">
-    <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.css">
+    <link rel="stylesheet" href="./font/Quicksand/quicksand.css">
+    <link rel="stylesheet" href="./font/Qicksand-Bold/Quicksand-Bold.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.css">
 
     <!-- MAIN CSS -->
 
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/contact.css">
    
-<body>
+<body onload="soluongCart()">
         <!-- HEADER -->
         <header>
             <nav class="myNavBar navbar navbar-expand-lg navbar-light">
@@ -55,11 +55,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Learn more.</a>
                             </li>
-                            <li class="nav-item myNavBar__cart">
-                                <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i></a>
+                            <li class="nav-item myNavBar__cart" style="position: relative;">
+                                <a class="nav-link" href="./cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                <span style="position: absolute; left: 80%;top: 0;" class="soluong_cart"></span>
                             </li>
                             <li class="nav-item myNavBar__buttons d-flex justify-content-between">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="./dangnhap.html">
                                   <button class="button button--white">Log In</button>
                                 </a>
                                 <a class="nav-link" href="./dangky.html">
@@ -81,7 +82,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarInstruction">
                     <ul class="navbar-nav ml-auto" id="mainNav">
-                        <li class="nav-item ">
+                        <li class="nav-item active">
                             <a class="nav-link" href="./home.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -90,8 +91,8 @@
                                 Eyeglasses
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Men</a>
-                                <a class="dropdown-item" href="#">Women</a>
+                                <a class="dropdown-item" href="./kinhnam.html">Men</a>
+                                <a class="dropdown-item" href="./kinhnu.html">Women</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -100,21 +101,21 @@
                                 Sunglasses
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Men</a>
-                                <a class="dropdown-item" href="#">Women</a>
+                                <a class="dropdown-item" href="./Sunkinhnam.html">Men</a>
+                                <a class="dropdown-item" href="./Sunkinhnu.html">Women</a>
                             </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./introduce.html">About</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#">Accessories</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="./TryOn.html">Try on virtually</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Get a prescription</a>
+                            <a class="nav-link" href="./sitemap.html">Sitemap</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="./contact.html">Contacts</a>
@@ -176,6 +177,9 @@
             </div>
         </div>
 
+        <div class="map text-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.503072720006!2d106.6782425134717!3d10.772728588369999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f21198a62c1%3A0xa091bdb5049e5008!2zMTEyIMSQLiBDYW8gVGjhuq9uZywgUGjGsOG7nW5nIDQsIFF14bqtbiAzLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1683430048445!5m2!1svi!2s" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <!-- FOOTER -->
         <footer>
             <div class="footer__top section">
@@ -253,13 +257,14 @@
             </div>
             <div class="footer__bottom">
                 <div>
-                    © 2023 Instruction. All rights reserved | Design by <a href="#">nvdsc</a>
+                    © 2023 Instruction. All rights reserved | Design by <a href="#">Nhóm 9</a>
                 </div>
             </div>
         </footer>
         <!-- Thu vien ho tro -->
         <script src="./js/jquery.min.js"></script>
         <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/cart.js"></script>
 
         
     <!-- Navigation bar JS -->

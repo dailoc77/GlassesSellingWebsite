@@ -1,0 +1,38 @@
+header {
+    top: 0;
+}
+
+.text0 {
+    position: absolute;
+    font-weight: 600;
+    top: 40%;
+    left: 15%;
+}
+
+.bestsl {
+    position: relative;
+    background-color: #e5e3e3;
+    border-bottom: 5px solid #6b2d75;
+}
+
+.cap1 {
+    font-size: 18px;
+    color: rgb(65, 65, 65);
+}
+
+.chitiet1 {
+    margin-top: 30vh;
+    background-color: rgb(235, 235, 235);
+    border-radius: 20px;
+}
+
+.chitiet2 {
+    margin-top: 30vh;
+    margin-left: 8vh;
+    border-radius: 20px;
+    background-color: rgb(242, 251, 251);
+}
+
+.but1 {
+    margin-left: 0;
+}
